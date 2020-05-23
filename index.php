@@ -2,28 +2,25 @@
 $result = mysqli_query($mysqli, "SELECT * FROM ESTOQUE ORDER BY PRODUTO");
 ?>
  
-<html>
+<html lang="pt">
 <head>    
-    <title>Homepage</title>
+    <title>Estoque</title>
 </head>
  
 <body>
-    <a href="add.html">Add New Data</a><br/><br/>
+    <a href="add.html">Adicionar produtos</a><br/><br/>
  
     <table width='80%' border=0>
-        <tr bgcolor='#CCCCCC'>
-            <td>Name</td>
-            <td>Age</td>
-            <td>Email</td>
-            <td>Update</td>
+        <tr>
+            <td>Produto</td>
+            <td>Quantidade</td>
+            <td>Ação</td>
         </tr>
         <?php 
-        //while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
         while($res = mysqli_fetch_array($result)) {         
             echo "<tr>";
             echo "<td>".$res['name']."</td>";
-            echo "<td>".$res['age']."</td>";
-            echo "<td>".$res['email']."</td>";    
+            echo "<td>".$res['age']."</td>";   
             echo "<td><a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
         }
         ?>
