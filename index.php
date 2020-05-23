@@ -1,5 +1,11 @@
 <?php
-$result = mysqli_query($mysqli, "SELECT * FROM ESTOQUE ORDER BY PRODUTO");
+function banco() 
+{
+    $mysqli = new mysqli("localhost", "root", "", "ESTOQUE");
+    return $mysqli;
+}
+banco()
+$result = mysqli_query($mysqli, "SELECT * FROM ESTOQUE ORDER BY NOME_PRODUTO");
 ?>
  
 <html lang="pt">
@@ -10,7 +16,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM ESTOQUE ORDER BY PRODUTO");
 <body>
     <a href="add.html">Adicionar produtos</a><br/><br/>
  
-    <table width='80%' border=0>
+    <table>
         <tr>
             <td>Produto</td>
             <td>Quantidade</td>
