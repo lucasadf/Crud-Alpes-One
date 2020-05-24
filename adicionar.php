@@ -27,7 +27,7 @@
   
  else
   {  
-    $result = mysqli_query($mysqli, "INSERT INTO ESTOQUE(nome_produto,qt_produto) VALUES('$nome_produto','$qt_produto',)");
+    $result = mysqli_query($mysqli, "INSERT INTO PRODUTO_ESTOQUE(nome_produto,qt_produto) VALUES('$nome_produto','$qt_produto',)");
     echo "Dados inseridos com sucesso";
     //echo <a href="index.php">Estoque</a>;
     header("Location: index.php");
