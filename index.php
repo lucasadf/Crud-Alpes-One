@@ -4,7 +4,7 @@
 </head>
  
 <body>
-    <a href="add.html">Adicionar produtos</a><br/><br/>
+    <a href="adicionar.html">Adicionar produtos</a><br/><br/>
  
     <table>
         <tr>
@@ -25,7 +25,7 @@
             echo "<tr>";
             echo "<td>".$res['nome_produto']."</td>";
             echo "<td>".$res['qt_produto']."</td>";   
-            echo "<td><a href=\"editar.php?id=$res[id]\">Editar</a> | <a href=\"delete.php?nome_produto=$res[nome_produto]\" onClick=\"return confirm('Deseja deletar?')\">Deletar</a></td>";        
+            echo "<td><a href=\"editar.php?nome_produto=$res[nome_produto]\">Editar</a> | <a href=\"delete.php?nome_produto=$res[nome_produto]\" onClick=\"return confirm('Deseja deletar?')\">Deletar</a></td>";        
               }
         ?>
     </table>
