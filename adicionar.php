@@ -21,12 +21,14 @@
   if(empty($nome_produto) || empty($qt_produto)) 
   {
     echo "Favor prencheer todos os campos";
-    echo <a href="index.php">Home</a>;
+    echo <a href="index.php">Estoque</a>;
   }
   
  else
   {  
     $result = mysqli_query($mysqli, "INSERT INTO ESTOQUE(nome_produto,qt_produto) VALUES('$nome_produto','$qt_produto',)");
+    echo "Dados inseridos com sucesso";
+    echo <a href="index.php">Estoque</a>;
   } 
 ?>  
 
