@@ -13,7 +13,7 @@
     <tbody>
       <tr>
         <td>Produto: </td>
-        <td><input type="text" nome_produto="nome" value=""></td>
+        <td><input type="text" nome_produto="nome_produto" value=""></td>
       </tr>
       <tr>
         <td>Quantidade: </td>
