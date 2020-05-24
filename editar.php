@@ -20,6 +20,7 @@ if(empty($nome_produto) || empty($qt_produto))
 else 
 {    
   $result = mysqli_query($mysqli, "UPDATE ESTOQUE SET nome_produto='$nome_produto',qt_produto='$qt_produto' WHERE nome_produto=$nome_aux");
+  echo "Dados editados com sucesso";
   header("Location: index.php");
 }
 
