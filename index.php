@@ -4,7 +4,7 @@
 </head>
  
 <body>
-  <a href="index.html">Adicionar produtos</a><br/><br/>
+  <a href="adicionar.html">Adicionar produtos</a><br/><br/>
  
    <table>
      <tr>
