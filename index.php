@@ -19,7 +19,7 @@
          return $mysqli;
        }
        banco();
-       $result = mysqli_query($mysqli, "SELECT * FROM ESTOQUE ORDER BY NOME_PRODUTO");
+       $result = mysqli_query($mysqli, "SELECT * FROM PRODUTO_ESTOQUE ORDER BY NOME_PRODUTO");
        while($res = mysqli_fetch_array($result)) 
        {         
          echo "<tr>";
